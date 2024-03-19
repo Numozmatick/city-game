@@ -1,7 +1,5 @@
 import React from 'react';
-import './startPage.css';
 import {Link} from "react-router-dom";
-
 
 function StartPage() {
     return (

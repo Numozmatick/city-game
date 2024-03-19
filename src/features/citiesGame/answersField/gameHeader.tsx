@@ -1,5 +1,3 @@
-import useTimer from "../hooks/useTimer";
-
 interface GameHeader {
     myTurn: boolean;
     seconds: number;

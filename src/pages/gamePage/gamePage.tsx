@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import './gamePage.css';
-import GameHeader from "../../features/timer/ui/timer";
+import GameHeader from "../../features/citiesGame/answersField/gameHeader";
 import InputWithButton from "../../shared/ui/inputWithButton/inputWithButton";
-import AnswersField from "../../shared/ui/answersField/answersField";
-import citiesData from '../../cities.json';
+import AnswersField from "../../features/citiesGame/answersField/answersField";
+import citiesData from '../../shared/settings/cities.json';
 import useTimer from "../../features/timer/hooks/useTimer";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as AirplaneIcon } from '../../shared/assets/AirplaneIcon.svg';
