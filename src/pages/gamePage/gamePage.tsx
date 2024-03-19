@@ -30,7 +30,7 @@ function GamePage() {
         navigate(`/result?${queryParams}`);
     }
 
-    const { seconds, progress, resetTimer} = useTimer({initialSeconds:10, endingHandler: () => checkWinner(citiesPool)});
+    const { seconds, progress, resetTimer} = useTimer({initialSeconds:120, endingHandler: () => checkWinner(citiesPool)});
 
     function changeTurn(){
         if (citiesPool.length % 2 === 0) {
@@ -82,10 +82,10 @@ function GamePage() {
             city.toLowerCase().startsWith(lastCityEndSymbol) && !citiesPool.includes(city)
         );
         if (foundCity) {
-            const randomDelay = Math.floor(Math.random() * (12100 - 10000) + 1000);
+            const randomTimeout = Math.floor(Math.random() * (121 - 10 + 1)) + 10;
             setTimeout(() => {
                 sendAnswer(foundCity);
-            }, randomDelay);
+            }, randomTimeout * 1000);
             // setTimeout(() => {
             //     sendAnswer(foundCity);
             // }, 1000);
