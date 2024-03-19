@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/city-game/static/css/main.196e6d56.css",
+    "main.js": "/city-game/static/js/main.9ba27a4c.js",
+    "static/js/453.08945947.chunk.js": "/city-game/static/js/453.08945947.chunk.js",
+    "static/media/AirplaneIcon.svg": "/city-game/static/media/AirplaneIcon.4003ddbb7580b2def923df81d9faa4b1.svg",
+    "index.html": "/city-game/index.html",
+    "main.196e6d56.css.map": "/city-game/static/css/main.196e6d56.css.map",
+    "main.9ba27a4c.js.map": "/city-game/static/js/main.9ba27a4c.js.map",
+    "453.08945947.chunk.js.map": "/city-game/static/js/453.08945947.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.196e6d56.css",
+    "static/js/main.9ba27a4c.js"
+  ]
+}
