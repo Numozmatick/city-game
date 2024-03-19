@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactComponent as AirplaneIcon } from '../../assets/AirplaneIcon.svg';
+
 
 interface AnswerInputProps {
     inputValue: string;
@@ -7,9 +7,10 @@ interface AnswerInputProps {
     placeholder: string;
     onSubmit:(value:string)=>void;
     setInputValue: (value: string) => void;
+    children?: string | React.ReactElement;
 }
 
-const InputWithButton: React.FC<AnswerInputProps> = ({inputValue, setInputValue, disabled, placeholder , onSubmit}) => {
+const InputWithButton: React.FC<AnswerInputProps> = ({inputValue, setInputValue, disabled, placeholder , onSubmit, children}) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
     };
@@ -23,7 +24,7 @@ const InputWithButton: React.FC<AnswerInputProps> = ({inputValue, setInputValue,
             <div className="flex flex-grow rounded-[6px] py-2 px-2 focus:outline-none bg-[#F3F4F6]">
                 <input
                     type="text"
-                    className={`flex-grow py-2 pr-4 bg-[#F3F4F6] focus:outline-none ${disabled ? 'text-gray-500' : 'placeholder-black'}`}
+                    className={`flex-grow py-2 pr-4 pl-2 bg-[#F3F4F6] focus:outline-none ${disabled ? 'text-gray-500' : 'placeholder-black'}`}
                     placeholder={placeholder || ''}
                     value={inputValue}
                     onChange={handleChange}
@@ -34,7 +35,7 @@ const InputWithButton: React.FC<AnswerInputProps> = ({inputValue, setInputValue,
                     onClick={handleSubmit}
                     disabled={disabled}
                 >
-                    <AirplaneIcon />
+                    {children}
                 </button>
             </div>
 

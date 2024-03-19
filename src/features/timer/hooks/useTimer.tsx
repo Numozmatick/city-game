@@ -15,15 +15,20 @@ const useTimer = ({ initialSeconds, endingHandler }: TimerHookProps) => {
             setSeconds(prevSeconds => {
                 if (prevSeconds <= 0) {
                     clearInterval(intervalId);
-                    endingHandler()
+                    setTimeout(endingHandler, 0);
                     return 0;
                 }
                 return prevSeconds - 1;
             });
         }, 1000);
 
-        return () => clearInterval(intervalId);
-    }, []);
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [endingHandler]);
+    function handler(){
+        endingHandler();
+    }
 
     useEffect(() => {
         const progressPercentage = (seconds / initialTime) * 100;

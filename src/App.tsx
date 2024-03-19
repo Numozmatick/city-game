@@ -10,12 +10,9 @@ function App() {
         <main className="p-[25px] bg-white rounded-xl w-100 sm:w-[576px]">
                 <Router>
                     <Routes>
-                        <Route path="/" element={<StartPage/>}>
-                        </Route>
-                        <Route path="/game" element={<GamePage/>}>
-                        </Route>
-                        <Route path="/result?status=:status&lastCity=:lastCity" element={<ResultPage/>}>
-                        </Route>
+                        <Route path="/" element={<StartPage/>}/>
+                        <Route path="/game" element={<GamePage/>}/>
+                        <Route path="/result" element={<ResultPage />} />
                     </Routes>
                 </Router>
         </main>
